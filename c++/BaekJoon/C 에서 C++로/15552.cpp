@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 10:27:19 by jgo               #+#    #+#             */
-/*   Updated: 2023/01/21 10:44:30 by jgo              ###   ########.fr       */
+/*   Updated: 2023/01/21 10:58:50 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,16 @@
 int main(void)
 {
 	int n;
-	int i;
 	int sum[2];
-	int *arr;
 
-	std::cin.tie(NULL);
 	std::ios_base::sync_with_stdio(false);
+	std::cin.tie(NULL);
 	std::cin >> n;
-	arr = (int *)malloc(sizeof(int) * n);
-	i = 0;
-	while (i < n)
+
+	for(int i = 0; i < n; i++)
 	{
 		std::cin >> sum[0] >> sum[1];
-		arr[i] = sum[0] + sum[1];
-		i++;
+		std::cout << sum[0] + sum[1] << "\n";
 	}
-	i = -1;
-	while (++i < n)
-		std::cout << arr[i] << "\n";
 	return (0);
 }

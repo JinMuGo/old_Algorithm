@@ -113,3 +113,6 @@ dist
 
 # Unignore all dirs
 !*/
+
+# Ignore debug folder
+*.dSYM/

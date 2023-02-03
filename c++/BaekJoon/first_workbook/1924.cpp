@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 21:46:34 by jgo               #+#    #+#             */
-/*   Updated: 2023/02/03 22:00:06 by jgo              ###   ########.fr       */
+/*   Updated: 2023/02/03 22:01:22 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,13 @@ int main(void)
     string day[7] = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
     int month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int i;
-    int sum;
 
     cin >> x >> y;
 
     i = 0;
-    sum = 0;
     while (++i < x)
-        sum += month[i];
-    cout << day[(sum + y) % 7];
+        y += month[i];
+    cout << day[(y) % 7];
 
     return (0);
 }

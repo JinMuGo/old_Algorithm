@@ -6,11 +6,12 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:05:23 by jgo               #+#    #+#             */
-/*   Updated: 2023/02/03 19:48:40 by jgo              ###   ########.fr       */
+/*   Updated: 2023/02/03 19:56:51 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <strings.h>
 using namespace std;
 
 int main(void)
@@ -21,27 +22,18 @@ int main(void)
     int v;
     int i;
     int num;
-    int answer;
+    int arr[201];
 
     cin >> n;
-    int arr[n];
     i = 0;
-    answer = 0;
+    bzero(arr, sizeof(int) * 201);
     while (i < n)
     {
         cin >> num;
-        arr[i] = num;
+        arr[num + 100]++;
         i++;
     }
     cin >> v;
-    i = 0;
-    while (i < n)
-    {
-        if (v == arr[i])
-            answer++;
-        i++;
-    }
-    cout << answer;
-
+    cout << arr[v + 100];
     return (0);
 }

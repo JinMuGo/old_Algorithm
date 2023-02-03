@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 22:02:14 by jgo               #+#    #+#             */
-/*   Updated: 2023/02/03 22:17:37 by jgo              ###   ########.fr       */
+/*   Updated: 2023/02/03 22:22:40 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 using namespace std;
 // use string
 
-string rev(string str)
+int rev(int num)
 {
-    char c;
-    int i = 0;
-    int end_idx = str.size() - 1;
+    int tmp = 0;
 
-    while (i < str.size() / 2)
+    while (num > 0)
     {
-        swap(str[i], str[end_idx - i]);
-        i++;
+        tmp = tmp * 10 + num % 10;
+        num /= 10;
     }
-    return to_string(stoi(str));
+
+    return (tmp);
 }
 
 int main(void)
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    string x, y;
+    int x, y;
 
     cin >> x >> y;
-    cout << rev(to_string(stoi(rev(x)) + stoi(rev(y))));
+
+    cout << rev(rev(x) + rev(y));
 
     return (0);
 }

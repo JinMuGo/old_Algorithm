@@ -104,3 +104,15 @@ dist
 .tern-port
 
 .vscode/
+
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# Ignore debug folder
+*.dSYM/

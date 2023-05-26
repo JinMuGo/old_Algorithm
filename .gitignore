@@ -116,3 +116,5 @@ dist
 
 # Ignore debug folder
 *.dSYM/
+
+.vscode/
